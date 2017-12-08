@@ -29,7 +29,7 @@ bool DLS(src, target, limit)
 
     return false
     
- ```
+```
  
 ### BruteForceSearch
 Consists of systematically enumerating all possible candidates for the solution and checking whether each candidate satisfies the problem's statement. Always get the best solution. Is slow.
