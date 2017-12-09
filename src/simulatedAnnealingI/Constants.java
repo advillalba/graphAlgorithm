@@ -1,4 +1,4 @@
-package simulatedAnnealing;
+package simulatedAnnealingI;
 
 public class Constants {
 	private Constants() {

@@ -1,4 +1,4 @@
-package simulatedAnnealing;
+package simulatedAnnealingI;
 
 import java.util.Random;
 
