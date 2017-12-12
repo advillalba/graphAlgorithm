@@ -1,2 +1,6 @@
 .classpath
 .settings/org.eclipse.jdt.core.prefs
+
+bin/hillClimbing/App\.class
+
+bin/hillClimbing/HillClimbing\.class
