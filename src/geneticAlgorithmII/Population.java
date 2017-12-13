@@ -1,4 +1,4 @@
-package geneticAlgorithmI;
+package geneticAlgorithmII;
 
 public class Population {
 	private Individual[]  individuals;
@@ -19,11 +19,11 @@ public class Population {
 		return this.individuals[index];
 	}
 	
-	public Individual getFitestIndividual() {
+	public Individual getFittestIndividual() {
 		Individual fittest = individuals[0];
 		
 		for(int i = 1;i<individuals.length;++i) {
-			if(getIndividual(i).getFitness() >= fittest.getFitness()) {
+			if(getIndividual(i).getFitness() < fittest.getFitness()) {
 				fittest = getIndividual(i);
 			}
 		}

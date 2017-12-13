@@ -1,4 +1,4 @@
-package geneticAlgorithmI;
+package geneticAlgorithmII;
 
 public class App {
 	public static void main(String[] args) {
@@ -9,14 +9,14 @@ public class App {
 		
 		int geneticCounter = 0;
 		
-		while(population.getFitestIndividual().getFitness() != Constants.MAX_FITNESS) {
+		while( geneticCounter != Constants.SIMULATION_LENGTH) {
 			++geneticCounter;
-			System.out.println("Generation: "+ geneticCounter + " - fittest is: " + population.getFitestIndividual().getFitness());
-			System.out.println(population.getFitestIndividual()+"\n");
+			System.out.println("Generation: "+ geneticCounter + " - fittest is: " + population.getFittestIndividual().getFitness());
+			System.out.println(population.getFittestIndividual()+"\n");
 			population = geneticAlgorithms.evolvePopulation(population);
 		}
 		
 		System.out.println("Solution found!!");
-		System.out.println(population.getFitestIndividual().getFitness());
+		System.out.println(population.getFittestIndividual().getFitness());
 	}
 }

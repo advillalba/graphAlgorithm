@@ -1,9 +1,9 @@
-package geneticAlgorithmI;
+package geneticAlgorithmII;
 
 import java.util.Arrays;
 import java.util.Random;
 
-import com.sun.xml.internal.ws.policy.spi.PolicyAssertionValidator.Fitness;
+
 
 public class Individual {
 	private int[] genes;
@@ -17,27 +17,39 @@ public class Individual {
 
 	public void generateIndividual() {
 		for (int i = 0; i < Constants.CROMOSOME_LENGTH; i++) {
-			int gene = randomGenerator.nextInt(21);
+			int gene = randomGenerator.nextInt(2);
 			genes[i] = gene;
 		}
 	}
 
-	public int getFitness() {
-		if (fitness == 0) {
-			for(int i = 0;i<Constants.CROMOSOME_LENGTH;i++) {
-				if(getGene(i) == Constants.SOLUTION_SEQUENCE[i]) {
-					this.fitness++;
-				}
-			}
-		}
-		return fitness;
+	public double f(double x) {
+		return Math.sin(x) * ((x - 2) * (x - 2)) + 3;
 	}
 
+	public double getFitness() {
+		double genesToDouble = genesToDouble();
+		return f(genesToDouble);
+	}
+	public double genesToDouble() {
+		int base = 1;
+		double geneInDouble = 0;
+		
+		for(int i=0;i<Constants.GENE_LENGTH;++i) {
+			if(this.genes[i] == 1) {
+				geneInDouble += base;
+			}
+			base *= 2;
+		}
+		geneInDouble /= 102.4f;
+		
+		return geneInDouble;
+	}
+	
 	public int getGene(int index) {
 		return this.genes[index];
 	}
-	
-	public void setGene(int index, int value ) {
+
+	public void setGene(int index, int value) {
 		this.genes[index] = value;
 		this.fitness = 0;
 	}

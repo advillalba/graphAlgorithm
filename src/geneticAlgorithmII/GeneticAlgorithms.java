@@ -1,4 +1,4 @@
-package geneticAlgorithmI;
+package geneticAlgorithmII;
 
 import java.util.Random;
 
@@ -34,7 +34,7 @@ public class GeneticAlgorithms {
 			newPopulation.saveIndividual(i, population.getIndividual(randomIndex));
 		}
 		
-		Individual fittestIndividual = newPopulation.getFitestIndividual();
+		Individual fittestIndividual = newPopulation.getFittestIndividual();
 		return fittestIndividual;
 	}
 	
@@ -55,7 +55,7 @@ public class GeneticAlgorithms {
 	private void mutate(Individual individual) {
 		for(int i = 0;i<Constants.CROMOSOME_LENGTH;++i) {
 			if(Math.random() <= Constants.MUTATION_RATE) {
-				int gene = randomGenerator.nextInt(21);
+				int gene = randomGenerator.nextInt(2);
 				individual.setGene(i, gene);
 			}
 		}
