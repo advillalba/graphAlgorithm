@@ -7,8 +7,8 @@ public class Constants {
 
 	public final static int NUM_DIMENSIONS = 2;
 	public final static int NUM_PARTICLES = 10;
-	public final static double MIN = -20;
-	public final static double MAX = 20;
+	public final static double MIN = -2;
+	public final static double MAX = 2;
 	public final static double w = 0.729;
 	public final static double c1 = 1.49;
 	public final static double c2 = 1.49;
