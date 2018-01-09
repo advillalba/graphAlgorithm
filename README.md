@@ -54,6 +54,7 @@ Similar to Hillclimbing algorithm, but we accept some errors. The number of acce
 
 ### Genetic Algorithms
 Metaheuristic algorithm inspired by the process of natural selection. With a initial population using binary to simulate de chromosomes of each individual, we can simulate hundreds of generations in order to get a valid solution for our problem. It works with a population wich can have these operators:
+ 
  * Crossover: Given two individiduals chromosomes from the population of one generation, we get a third individual using probability which will be based on both given chromosomes. Inspired on reproduction. 
  * Mutation: Given one individual from the population of one generation, its chromosomes can be mutated with a probability.
 
