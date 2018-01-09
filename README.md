@@ -51,3 +51,11 @@ Given a defined function we can get the best local optimum value. Using a define
 
 ### SimulatedAnnealing
 Similar to Hillclimbing algorithm, but we accept some errors. The number of accepted errors is defined by the temperature, when we find a lower value than the current one, we decrease the current temperature until we dont accept more errors. Is a good algorithm because we get the global optimum value.
+
+### Genetic Algorithms
+Metaheuristic algorithm inspired by the process of natural selection. With a initial population using binary to simulate de chromosomes of each individual, we can simulate hundreds of generations in order to get a valid solution for our problem. It works with a population wich can have these operators:
+ * Crossover: Given two individiduals chromosomes from the population of one generation, we get a third individual using probability which will be based on both given chromosomes. Inspired on reproduction. 
+ * Mutation: Given one individual from the population of one generation, its chromosomes can be mutated with a probability.
+
+### Swarm Algorithm(particle algorithm)
+Metaheuristic algorithm wich simulate the a insects colony. Each individual of the colony has simple instructions, alone is unable to get a global minimum/maximum but using hundreds of individuals we create an complex algorithm based on it. Each individual can find a local minimum an the other individuals can move to that minimum or follow their own path in order to find a global minimum.
